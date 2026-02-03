@@ -19,16 +19,16 @@ coverage
 !.vscode/extensions.json
 .idea
 *.suo
-*.ntvs*
-*.njsproj
+*.ntvs*j
 *.sln
+*.njspro
 *.sw?
 
 *.tsbuildinfo
+ache
 
-.eslintcache
-
-# Cypress
+# Cypres
+.eslintcs
 /cypress/videos/
 /cypress/screenshots/
 
