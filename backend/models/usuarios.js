@@ -1,16 +1,23 @@
-import App from '@/App.vue';
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+const usuariosSchema = mongoose.Schema({
+    nomUsuario: {
+        type: String,
+        required: [true]
+    },
+    email: {
+        type: String,
+        required: [true]
+    },
+    password: {
+        type: String,
+        required: [true]
+    },
+    urlFotoPerfil: {
+        type: String,
+        required: [true]
+    }
+})
 
-const usuarioSchema = {
-    nomUsuario: String,
-    email: String,
-    password: String,
-    urlFotoPerfil: String
-};
-
-const modeloUsuario = mongoose.model('usuarios', usuarioSchema);
-
-
-
+const usuario = mongoose.model("usuarios", usuariosSchema, "usuarios")
+export {usuario}

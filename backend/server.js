@@ -9,7 +9,7 @@ const mongoURI = "mongodb+srv://kaminosmongo:kaminos3085mBVVm%40ad@kaminosdb.c2i
 
 const connectionBD = async () => {
    try {
-    await mongoose.connect(mongoURI);
+    await mongoose.connect(mongoURI, {dbName: "Kaminos"});
     console.log("MONGODB CONNECTED!")
    } catch (error) {
       console.error("Error connecting to MongoDB:", error);
